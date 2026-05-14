@@ -1,0 +1,91 @@
+@media screen and (max-width: 940px) {
+
+    /* Nav - header de navegação */
+    nav {
+        width: 100%;
+
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+
+        position: static;
+        z-index: none;
+        top: none;
+    }.line{display: none;}
+
+    /* Nav - search */
+    .search {
+        width: 60%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search input {
+        width: 100%;
+        height: 1.7rem;
+        padding: 0 0.3rem;
+
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .search input:focus {
+        border: none;
+        outline: 1px solid #606060;
+    }
+    /* Nav - icons -- ImagemDePerfil */
+    .icon img {
+        width: 50px;
+        height: 50px;
+
+        cursor: pointer;
+        object-fit: cover;
+        border: solid 1px #303030;
+        border-radius: 100%;
+    }
+
+    /* Main - corpo do site */
+    #corpo {
+        margin: 1.5rem 0 1rem 1.5rem;
+
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    /* Vídeo - main */
+    .container-video{
+        margin: 1.5rem 0.55rem 0 0;
+    }
+    .container-video video {
+        width: 100%;
+        height: auto;
+    
+        border-radius: 5px;
+    }
+
+    /* inscrição - like-dislike - compartilhamento */
+    .interação { /*Principal*/
+        margin: 1.5rem 0;
+    }
+    .ri-share-line {
+        width: 31%;
+        height: auto;
+    }
+    .ri-download-2-line {
+        width: 30%;
+        height: auto;
+    }
+    .ri-download-2-line:hover {
+        background: #80808071;
+        color: #000;
+
+        box-shadow: none;
+    }
+    .ri-share-line:hover {
+        background: #80808071;
+        color: #000;
+
+        box-shadow: none;
+    }
+}

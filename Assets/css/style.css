@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Staatliches&family=Teko:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #f1f2f1;
+}
+
+
+:root {
+    --background-active: #cacaca;
+}
+
+
+/* Cabeçalho */
+nav {
+    background: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+}
+nav figure {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+nav figure img {
+    cursor: pointer;
+    width: 90px;
+    height: 20px;
+}
+.line {
+    width: 1.5rem;
+    height: 1rem;
+    margin-right: 50px;
+}
+
+/* nav - Pesquisa */
+.search {
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search input {
+    width: 60%;
+    height: 35%;
+    padding-left: 10px;
+
+    border: solid 1px #808080;
+    z-index: 1;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: 500;
+}
+.search input:focus {
+    border: none;
+    outline: 1px solid #0ba6ff;
+}
+.search button {
+    padding: 0.3rem 0.85rem;
+  
+
+    cursor: pointer;
+    border: solid 1px #808080;
+}
+.search button:hover {
+    background: #d8d8d8;
+}
+.search button:active {
+    background: var(--background-active);
+}
+
+/* nav - ícones */
+.icon {
+    margin: 1rem;
+
+    display: flex;
+    align-items: center;
+}
+.ri-vidicon-line, .ri-notification-2-line {
+    margin: 10px;
+    padding: 5px;
+    
+    color: #000;
+    cursor: pointer;
+
+    transition: .2s linear;
+}
+.ri-notification-2-line:hover, .ri-vidicon-line:hover {
+    background: #e6e6e6;
+    border-radius: 50px;
+}
+.ri-notification-2-line:active, .ri-vidicon-line:active {
+    background-color: var(--background-active);
+}
+
+.icon img {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+    object-fit: cover;
+    border: solid 1px black;
+    border-radius: 100%;
+}
+
+/* Main-Corpo-do-site */
+#corpo {
+    margin: 1.5rem 1.5rem 2.5rem 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.container-video {
+    margin: 1rem;
+
+    flex-grow: 1;
+}
+.container-video video {
+    width: 100%;
+    height: auto;
+
+    border-radius: 10px;
+}
+.container-video h1 {
+    margin: 10px 0 15px 5px;
+
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+}
+
+.interação {
+    max-width: 100%;
+    margin-top: 0.8rem;
+    gap: 1rem;
+
+    display: flex;
+    flex-flow:row wrap;
+    align-items: center;
+}
+.interação__perfil {
+    gap: 0.8rem;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.interação__perfil picture img {
+    width: 45px;
+    height: 45px;
+
+    cursor: pointer;
+    border: transparent;
+    border-radius: 50%;
+}
+.interação__perfil p {
+    white-space: pre-line;
+}
+.interação__perfil p b {
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+.interação__perfil p span {
+    font-family: "Roboto", sans-serif;
+    font-size: small;
+    font-weight: 400;
+}
+
+.inscrição button {
+    width: 120%;
+    height: auto;
+    padding: 10px 0 10px 0;
+
+    cursor: pointer;
+    background: red;
+    border: transparent;
+    border-radius: 5px;
+
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+
+    transition: .3s linear;
+}
+.inscrição button:hover {
+    background: #ff0202be;
+    color: #000;
+}
+
+.like-dislike {
+    margin: 0 0 0 20px;
+    gap: 0.5rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+}
+.like-dislike button {
+    padding: 0.4rem 1.3rem;
+
+    cursor: pointer;
+    border: solid 1px #808080;
+    background: #e6e6e6;
+    border-radius: 50px;
+    font-size: medium;
+
+    transition: .1s linear;
+}
+.like-dislike button:hover {
+    background: #808080a4;
+    color: #000;
+}.like-dislike button:active {
+    background: #606060c9;
+}
+
+/* COMPARTILHAMENTO - DOWNLOAD */
+.ri-share-line {
+    width: 15%;
+    height: auto;
+    padding: 0.3rem;
+
+    cursor: pointer;
+    text-align: center;
+    word-wrap: break-word;
+    border: solid 1px gray;
+    border-radius: 50px;
+
+    transition: .1s linear;
+}
+.ri-download-2-line {
+    width: 15%;
+    height: auto;
+    padding: 0.3rem;
+
+    cursor: pointer;
+    text-align: center;
+    word-wrap: break-word;
+    border: solid 1px gray;
+    border-radius: 50px;
+
+    transition: .1s linear;
+}
+.ri-download-2-line:hover {
+    box-shadow: -2px -2px 5px #808080 inset;
+    color: #000;
+}
+.ri-share-line:hover {
+    box-shadow: -2px -2px 5px #808080 inset;
+    color: #000;
+}
+
+/* Main - descrição */
+.descrição {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    padding-left: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #6d6d6d38;
+    border-radius: 10px;
+}
+.descrição h5 {
+    margin-top: 1rem;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+    font-weight: 900;
+}
+.descrição p {
+    margin-top: 2rem;
+    padding-bottom: 10px;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+}
+
+/* Seletores -- Vídeos */
+.seletores {
+    gap: 0.5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+#seletor__link {
+    color: #000;
+    text-decoration: none;
+}
+.seletores__video{
+    gap: 0.4rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+}
+.seletores__video picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.seletores__video picture, .video__board h3, .port__escopo span {
+    cursor: pointer;
+}
+
+.video__board {
+    width: 45%;
+    gap: 0.5rem;
+
+    display: inherit;
+    flex-flow: column nowrap;
+}.port__escopo {
+    gap: 0.15rem;
+
+    display: inherit; 
+    flex-flow: column nowrap;
+}.port__escopo span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.port__escopo span i::before {
+    content: '°';
+    vertical-align: sub;
+}
+.port__escopo a{
+    width: 45%;
+
+    color: #505050; 
+    text-decoration: none; 
+}
+.video__board h3, .port__escopo{
+    font-family: "Roboto", sans-serif;
+    font-size: smaller;
+}
+.video__board h3 {
+    font-weight: 800;
+    font-size: medium;
+}
+.video__board .port__escopo {
+    font-weight: 300;
+}
