@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr );
+    grid-template-rows: repeat(10, 64.6px);
+    grid-template-areas: 
+    "header header header header"
+    "sidebar main main main"
+    "sidebar main main main"
+    "sidebar main main main"
+    "sidebar main main main"
+    "sidebar main main main"
+    "sidebar main main main"
+    "sidebar main main main"
+    "sidebar main main main"
+    "sidebar main main main";
+}
+
+/* Navbar */
+#cabeçalho {
+    display: grid;
+    grid-area: header;
+    grid-column-start: 1;
+    grid-column-end: 11;
+
+    background: #86cfff;
+}
+
+#sidebar {
+    grid-area: sidebar;
+
+    background: #86cfff;
+}
+/* icons-navbar */
+.select__icons {
+    margin: 2rem 0 0 0;
+    gap: 2.5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.select__icons a{
+    text-decoration: none;
+
+    transition: .2s;
+}
+.select__icons a:hover {
+    transform: scale(1.05);
+}
+
+/* Main--artigo-do-site */
+#principal {
+    margin: 2.75rem 0 0 0;
+
+    display: grid;
+    grid-column-start: 4;
+    grid-column-end: 9;
+
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+}
+/* Main-Cards */
+.main__board {
+    width: 100%;
+    height: auto;
+    margin: 4rem 0 0 0;
+    gap: 5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.board__cards:nth-child(1) {
+    padding: 2rem 1.5rem 0.75rem 1.5rem;
+    gap: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #c8e9ffc2;
+    border-radius: 10px;
+    transition: .4s linear;
+}
+.board__cards:nth-child(2) {
+    padding: 2rem 3rem 0.75rem 3rem;
+    gap: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #c8e9ffc2;
+    border-radius: 10px;
+    transition: .4s linear;
+}
+.board__cards h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: medium;
+    white-space: pre-line;
+}
+
+.board__cards:nth-child(1):hover {
+    cursor: pointer;
+    transform: perspective(25rem) rotateY(10deg) rotateZ(-5deg);
+    box-shadow: 5px 5px 10px #86cfff5b;
+}
+.board__cards:nth-child(2):hover {
+    cursor: pointer;
+    transform: perspective(25rem) rotateY(-10deg) rotateZ(5deg);
+    box-shadow: 5px 5px 10px #86cfff5b;
+}
+
